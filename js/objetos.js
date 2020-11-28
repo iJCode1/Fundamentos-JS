@@ -44,3 +44,16 @@ function mostrarDatos2({nombre, apellido, edad}){
 }
 
 mostrarDatos2(joel);
+
+/*
+    Al pasar un objeto como argumento dentro de una función... este modificara los valores.
+    Es decir, podemos alterar los valores de las claves del objeto.
+    Por ejmplo la edad de joel era 21 pero usando la función 'cumpleaños' su edad aumentara a 22.
+*/
+
+function cumpleaños(persona){
+    persona.edad += 1;
+}
+
+cumpleaños(joel);
+console.log(`Joel tiene ${joel.edad} años`); // Joel tiene 22 años
